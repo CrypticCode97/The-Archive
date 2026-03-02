@@ -1,21 +1,157 @@
-
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>YourBot</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Archivist | Discord Knowledge Bot</title>
+  <meta name="description" content="Archivist is a privacy-first Discord bot for server-local PDF knowledge, citation-backed answers, and configurable document retention.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/site-config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<h1>YourBot</h1>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-kicker" data-config-text="brand.teamName" data-placeholder="The-Archive"></span>
+        <span class="brand-title" data-config-text="brand.productName" data-placeholder="Archivist"></span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="nav-menu" data-nav aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" data-page-link>Home</a></li>
+          <li><a href="commands.html" data-page-link>Commands</a></li>
+          <li><a href="faq.html" data-page-link>FAQ</a></li>
+          <li><a href="contact.html" data-page-link>Contact</a></li>
+          <li><a href="privacy.html" data-page-link>Privacy</a></li>
+          <li><a href="terms.html" data-page-link>Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<p>The best Discord bot ever.</p>
+  <main id="main" class="container page-reveal">
+    <section class="hero">
+      <p class="kicker">Discord Knowledge Bot</p>
+      <h1>Keep your server documents searchable, private, and citation-backed.</h1>
+      <p data-config-text="brand.tagline" data-placeholder="Your Discord knowledge base for server-local PDFs"></p>
+      <p>Archivist ingests PDFs, indexes evidence, and answers in-channel with source references so teams can trust what they read.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" data-config-link="inviteUrl" data-link-fallback="Invite link coming soon" href="#">Invite Archivist</a>
+        <a class="btn btn-secondary" data-config-link="supportServerUrl" data-link-fallback="Support server link coming soon" href="#">Join Support Server</a>
+        <a class="btn btn-tertiary" data-config-link="githubRepoUrl" data-link-fallback="GitHub repo link coming soon" href="#">View Jeeves Repo</a>
+      </div>
+      <div class="notice">
+        Production links and legal owner details still need final values in <code>assets/js/site-config.js</code>.
+      </div>
+    </section>
 
-<h2>Links</h2>
+    <section class="section">
+      <h2>What Archivist does</h2>
+      <div class="grid">
+        <article class="card span-4">
+          <h3>Document-grounded answers</h3>
+          <p>Answers include references to the indexed file and page so users can verify each claim quickly.</p>
+        </article>
+        <article class="card span-4">
+          <h3>Privacy-first architecture</h3>
+          <p>Archivist is designed for server-local data isolation with retention controls and explicit limits.</p>
+        </article>
+        <article class="card span-4">
+          <h3>Fast command workflow</h3>
+          <p>Use slash commands for upload, retention, plan management, and usage visibility without leaving Discord.</p>
+        </article>
+      </div>
+    </section>
 
-<ul>
-<li><a href="privacy.html">Privacy Policy</a></li>
-<li><a href="terms.html">Terms of Service</a></li>
-</ul>
+    <section class="section">
+      <h2>How it works</h2>
+      <ol class="step-list">
+        <li>Admins upload a PDF with <code>/docs add</code>.</li>
+        <li>Archivist indexes text and tracks ingestion status.</li>
+        <li>Members ask with <code>/ask</code> or <code>@Archivist ...</code> and get citation-backed responses.</li>
+      </ol>
+    </section>
 
+    <section class="section">
+      <h2>Limits and plans at a glance</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Capability</th>
+              <th>Free</th>
+              <th>Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Indexed documents per server</td>
+              <td>3</td>
+              <td>Expanded allowance</td>
+            </tr>
+            <tr>
+              <td>Upload size per PDF</td>
+              <td>5 MB</td>
+              <td>Plan policy</td>
+            </tr>
+            <tr>
+              <td>Daily queries per server (UTC)</td>
+              <td>50</td>
+              <td>Plan policy</td>
+            </tr>
+            <tr>
+              <td>OCR fallback for non-machine-readable PDF</td>
+              <td>Upgrade required</td>
+              <td>Available</td>
+            </tr>
+            <tr>
+              <td>Retention policy range</td>
+              <td>48h to 1 year</td>
+              <td>48h to 1 year</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Command highlights</h2>
+      <div class="grid">
+        <article class="card span-6">
+          <h3>Ask and retrieve</h3>
+          <p><code>/ask question:"what is our refund policy?"</code></p>
+          <p><code>@Archivist compare probation and contractor rules</code></p>
+        </article>
+        <article class="card span-6">
+          <h3>Admin controls</h3>
+          <p><code>/docs add</code>, <code>/docs remove</code>, <code>/docs retention set</code>, <code>/plan upgrade</code></p>
+          <p>See complete usage on the <a href="commands.html">Commands page</a>.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="legal-identity">
+        <strong data-config-text="brand.productName" data-placeholder="Archivist"></strong>
+        by <span data-config-text="brand.teamName" data-placeholder="The-Archive"></span>.
+        Contact: <span data-config-text="legal.contactEmail" data-placeholder="[TODO: Add contact email]"></span>
+      </p>
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="faq.html">FAQ</a>
+        <a href="commands.html">Commands</a>
+      </nav>
+      <p class="legal-identity">&copy; <span data-current-year></span> <span data-config-text="brand.teamName" data-placeholder="The-Archive"></span></p>
+    </div>
+  </footer>
 </body>
 </html>
